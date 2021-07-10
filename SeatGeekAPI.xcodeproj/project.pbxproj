@@ -28,6 +28,8 @@
 		4207842D269A42CA00EC3746 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207842C269A42CA00EC3746 /* Meta.swift */; };
 		42078430269A4B9200EC3746 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207842F269A4B9200EC3746 /* NetworkManager.swift */; };
 		42078432269A4BDF00EC3746 /* EventError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42078431269A4BDF00EC3746 /* EventError.swift */; };
+		428F9C7B269A546A002BC688 /* EventsLookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C7A269A546A002BC688 /* EventsLookupViewController.swift */; };
+		428F9C7D269A5489002BC688 /* EventsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C7C269A5489002BC688 /* EventsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		4207842C269A42CA00EC3746 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		4207842F269A4B9200EC3746 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		42078431269A4BDF00EC3746 /* EventError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventError.swift; sourceTree = "<group>"; };
+		428F9C7A269A546A002BC688 /* EventsLookupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsLookupViewController.swift; sourceTree = "<group>"; };
+		428F9C7C269A5489002BC688 /* EventsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				420783FE269A3A2500EC3746 /* AppDelegate.swift */,
 				42078400269A3A2500EC3746 /* SceneDelegate.swift */,
 				42078404269A3A2500EC3746 /* Main.storyboard */,
+				428F9C7E269A54AC002BC688 /* View Controller */,
 				42078433269A4BF900EC3746 /* Networking */,
 				4207842E269A42E800EC3746 /* Model */,
 				42078407269A3A2600EC3746 /* Assets.xcassets */,
@@ -126,6 +131,15 @@
 				42078431269A4BDF00EC3746 /* EventError.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		428F9C7E269A54AC002BC688 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				428F9C7C269A5489002BC688 /* EventsDetailViewController.swift */,
+				428F9C7A269A546A002BC688 /* EventsLookupViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +222,9 @@
 				42078419269A40A900EC3746 /* Division.swift in Sources */,
 				42078415269A403C00EC3746 /* InHand.swift in Sources */,
 				420783FF269A3A2500EC3746 /* AppDelegate.swift in Sources */,
+				428F9C7B269A546A002BC688 /* EventsLookupViewController.swift in Sources */,
 				42078425269A422000EC3746 /* PerformerStats.swift in Sources */,
+				428F9C7D269A5489002BC688 /* EventsDetailViewController.swift in Sources */,
 				42078430269A4B9200EC3746 /* NetworkManager.swift in Sources */,
 				42078427269A425500EC3746 /* Taxonomy.swift in Sources */,
 				42078401269A3A2500EC3746 /* SceneDelegate.swift in Sources */,
