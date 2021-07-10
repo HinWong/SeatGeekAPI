@@ -7,11 +7,9 @@
 
 import Foundation
 
-//c42c0f9c5d8b41aa8656cf9cd24609c5ebaba94020f49ede4cd6535aa57e4ed4 - API Key
-//https://api.seatgeek.com/2/events?client_id=MjI0OTMxOTV8MTYyNTk0ODc1My4xMjk1NDE5&q=drake - Sample request url
 
 // MARK: - Welcome
-struct Welcome: Codable {
+struct EventResponse: Codable {
     let events: [Event]
     let meta: Meta
     let inHand: InHand
