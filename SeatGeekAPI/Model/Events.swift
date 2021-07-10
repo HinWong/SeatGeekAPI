@@ -80,25 +80,6 @@ struct Event: Codable {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 enum NameEnum: String, Codable {
     case concert = "concert"
     case concerts = "concerts"
@@ -114,13 +95,9 @@ enum PerformerType: String, Codable {
     case ncaaFootball = "ncaa_football"
 }
 
-
-
 enum Status: String, Codable {
     case normal = "normal"
 }
-
-
 
 enum Country: String, Codable {
     case canada = "Canada"
@@ -132,8 +109,6 @@ enum Timezone: String, Codable {
     case americaIndianaIndianapolis = "America/Indiana/Indianapolis"
     case americaNewYork = "America/New_York"
 }
-
-
 
 // MARK: - Encode/decode helpers
 
