@@ -28,4 +28,8 @@ class EventViewModel {
     func getLocation(indexPath: IndexPath) -> String {
         self.eventInformation.events[indexPath.row].venue.address
     }
+    
+    func displayLocationImage(indexPath: IndexPath) -> String {
+        self.eventInformation.events[indexPath.row].venue.displayLocation
+    }
 }

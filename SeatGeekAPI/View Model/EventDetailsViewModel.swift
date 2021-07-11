@@ -31,4 +31,8 @@ class EventDetailsViewModel {
     func getVenueLocation() -> String {
         self.event.venue.address
     }
+    
+    func displayVenueLocation() -> String {
+        self.event.venue.displayLocation
+    }
 }
