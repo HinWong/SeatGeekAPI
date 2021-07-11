@@ -24,4 +24,8 @@ class EventViewModel {
     func getEventTitle(indexPath: IndexPath) -> String {
         self.eventInformation.events[indexPath.row].title
     }
+    
+    func getLocation(indexPath: IndexPath) -> String {
+        self.eventInformation.events[indexPath.row].venue.address
+    }
 }
