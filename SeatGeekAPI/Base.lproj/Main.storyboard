@@ -33,6 +33,10 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="DuH-zG-J9r"/>
+                    <connections>
+                        <outlet property="eventsSearchBar" destination="Hgg-5W-1bm" id="25g-c7-tx1"/>
+                        <outlet property="eventsTableView" destination="664-1b-ifH" id="a6V-Tx-QbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egx-pU-0Vq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
