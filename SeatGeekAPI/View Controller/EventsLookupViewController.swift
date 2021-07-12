@@ -24,13 +24,17 @@ class EventsLookupViewController: UIViewController {
 //MARK: - Table view logic
 extension EventsLookupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return eventsVM?.getNumberOfEvents() ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = eventsTableView.dequeueReusableCell(withIdentifier: "eventCell") as? EventsTableViewCell else {return UITableViewCell()}
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     
 }
 
@@ -43,6 +47,7 @@ extension EventsLookupViewController: UISearchBarDelegate {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
+                    //Something is missing here...
                     print(response)
                     self?.eventsTableView.reloadData()
                 case .failure(let error):

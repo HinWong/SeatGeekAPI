@@ -39,4 +39,8 @@ class EventViewModel {
         self.performerImage.huge ?? "N/A"
     }
     
+    func getNumberOfEvents() -> Int {
+        self.eventInformation.events?.count ?? 1
+    }
+    
 }
