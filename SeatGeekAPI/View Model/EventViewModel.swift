@@ -9,26 +9,26 @@ import Foundation
 
 class EventViewModel {
     let eventInformation: EventResponse
+    let eventSpecifics: Event
     let performerImage: PerformerImages
-    init(eventResponse: EventResponse, performerImage: PerformerImages) {
+    init(eventResponse: EventResponse, performerImage: PerformerImages, eventSpecifics: Event) {
         self.eventInformation = eventResponse
         self.performerImage = performerImage
+        self.eventSpecifics = eventSpecifics
     }
     
-    func getVenueAt(indexPath: IndexPath)  -> String {
-        self.eventInformation.events?[indexPath.row].venue?.address ?? "N/A"
+    func getVenueAt()  -> String {
+        //self.eventInformation.events?[indexPath.row].venue?.address ?? "N/A"
+        self.eventSpecifics.venue?.address ?? "N/A"
     }
     
-    func getEventDate(indexPath: IndexPath) -> String {
-        self.eventInformation.events?[indexPath.row].announceDate ?? "N/A"
+    func getEventDate() -> String {
+        //self.eventInformation.events?[indexPath.row].announceDate ?? "N/A"
+        self.eventSpecifics.announceDate ?? "N/A"
     }
     
-    func getEventTitle(indexPath: IndexPath) -> String {
-        self.eventInformation.events?[indexPath.row].title ?? "N/A"
-    }
-    
-    func getLocation(indexPath: IndexPath) -> String {
-        self.eventInformation.events?[indexPath.row].venue?.address ?? "N/A"
+    func getEventTitle() -> String {
+        self.eventSpecifics.title ?? "N/A"
     }
     
     func displayLocationImage(indexPath: IndexPath) -> String {

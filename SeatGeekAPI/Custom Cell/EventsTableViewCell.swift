@@ -14,10 +14,21 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var eventTimeLabel: UILabel!
     
-//    var viewModel: EventViewModel {
-//        didSet {
-//
-//        }
-//    }
+    var cellViewModel: EventViewModel? {
+        didSet {
+            DispatchQueue.main.async {
+                self.updateLabels()
+            }
+        }
+    }
+    
+    func updateLabels() {
+        if let cellViewModel = cellViewModel {
+            eventTitleLabel.text = cellViewModel.getEventTitle()
+            eventLocationLabel.text = cellViewModel.getVenueAt()
+            eventTimeLabel.text = cellViewModel.getEventDate()
+            //eventsImageView.image = cellViewModel.getPerformerImage()
+        }
+    }
     
 }

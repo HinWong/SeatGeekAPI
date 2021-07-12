@@ -13,6 +13,7 @@ class EventsLookupViewController: UIViewController {
         super.viewDidLoad()
         eventsTableView.delegate = self
         eventsSearchBar.delegate = self
+        eventsTableView.dataSource = self
     }
     
     @IBOutlet var eventsTableView: UITableView!
