@@ -10,10 +10,12 @@ import Foundation
 class EventDetailsViewModel {
     let eventResponse: [Event]
     let event: Event
+    let performerImage: PerformerImages
     
-    init(eventResponse: [Event], event: Event) {
+    init(eventResponse: [Event], event: Event, performerImage: PerformerImages) {
         self.eventResponse = eventResponse
         self.event = event
+        self.performerImage = performerImage
     }
     
     func getEventTitle() -> String {
@@ -24,8 +26,8 @@ class EventDetailsViewModel {
         self.event.datetimeLocal ?? "N/A"
     }
     
-    func getEventLocation() {
-        self.event.venue
+    func getEventLocation() -> String {
+        self.event.venue?.address ?? "N/A"
     }
     
     func getVenueLocation() -> String {
@@ -34,5 +36,9 @@ class EventDetailsViewModel {
     
     func displayVenueLocation() -> String {
         self.event.venue?.displayLocation ?? "N/A"
+    }
+    
+    func getDetailedImage() -> String {
+        self.performerImage.huge ?? "N/A"
     }
 }

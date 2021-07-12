@@ -14,6 +14,10 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var eventTimeLabel: UILabel!
     
-    
+//    var viewModel: EventViewModel {
+//        didSet {
+//
+//        }
+//    }
     
 }

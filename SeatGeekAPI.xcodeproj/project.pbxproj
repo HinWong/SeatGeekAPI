@@ -33,6 +33,7 @@
 		428F9C81269A5BF4002BC688 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C80269A5BF4002BC688 /* EventViewModel.swift */; };
 		428F9C83269A5C09002BC688 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C82269A5C09002BC688 /* EventDetailsViewModel.swift */; };
 		428F9C86269C8A31002BC688 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C85269C8A31002BC688 /* EventsTableViewCell.swift */; };
+		428F9C89269CBFDE002BC688 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C88269CBFDE002BC688 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		428F9C80269A5BF4002BC688 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		428F9C82269A5C09002BC688 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		428F9C85269C8A31002BC688 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		428F9C88269CBFDE002BC688 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				4207842F269A4B9200EC3746 /* NetworkManager.swift */,
 				42078431269A4BDF00EC3746 /* EventError.swift */,
+				428F9C88269CBFDE002BC688 /* ImageCache.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				42078430269A4B9200EC3746 /* NetworkManager.swift in Sources */,
 				42078427269A425500EC3746 /* Taxonomy.swift in Sources */,
 				42078401269A3A2500EC3746 /* SceneDelegate.swift in Sources */,
+				428F9C89269CBFDE002BC688 /* ImageCache.swift in Sources */,
 				4207842D269A42CA00EC3746 /* Meta.swift in Sources */,
 				4207841B269A412000EC3746 /* Genre.swift in Sources */,
 				42078429269A427100EC3746 /* EventStats.swift in Sources */,

@@ -9,12 +9,14 @@ import Foundation
 
 class EventViewModel {
     let eventInformation: EventResponse
-    init(eventResponse: EventResponse) {
+    let performerImage: PerformerImages
+    init(eventResponse: EventResponse, performerImage: PerformerImages) {
         self.eventInformation = eventResponse
+        self.performerImage = performerImage
     }
     
-    func getVenueAt(indexPath: IndexPath)  {
-        self.eventInformation.events?[indexPath.row].venue
+    func getVenueAt(indexPath: IndexPath)  -> String {
+        self.eventInformation.events?[indexPath.row].venue?.address ?? "N/A"
     }
     
     func getEventDate(indexPath: IndexPath) -> String {
@@ -32,4 +34,9 @@ class EventViewModel {
     func displayLocationImage(indexPath: IndexPath) -> String {
         self.eventInformation.events?[indexPath.row].venue?.displayLocation ?? "N/A"
     }
+    
+    func getPerformerImage() -> String {
+        self.performerImage.huge ?? "N/A"
+    }
+    
 }
