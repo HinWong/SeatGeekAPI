@@ -18,12 +18,10 @@ class EventViewModel {
     }
     
     func getVenueAt()  -> String {
-        //self.eventInformation.events?[indexPath.row].venue?.address ?? "N/A"
         self.eventSpecifics.venue?.address ?? "N/A"
     }
     
     func getEventDate() -> String {
-        //self.eventInformation.events?[indexPath.row].announceDate ?? "N/A"
         self.eventSpecifics.announceDate ?? "N/A"
     }
     
