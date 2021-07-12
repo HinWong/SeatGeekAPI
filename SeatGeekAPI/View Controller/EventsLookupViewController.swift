@@ -19,6 +19,7 @@ class EventsLookupViewController: UIViewController {
     @IBOutlet weak var eventsSearchBar: UISearchBar!
 }
 
+//MARK: - Table view logic
 extension EventsLookupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -31,6 +32,7 @@ extension EventsLookupViewController: UITableViewDelegate, UITableViewDataSource
     
 }
 
+//MARK: - Search bar logic
 extension EventsLookupViewController: UISearchBarDelegate {
     
 }
