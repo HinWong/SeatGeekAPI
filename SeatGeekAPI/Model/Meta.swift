@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Meta
 struct Meta: Codable {
-    let total, took, page, perPage: Int
+    let total, took, page, perPage: Int?
     let geolocation: JSONNull?
 
     enum CodingKeys: String, CodingKey {

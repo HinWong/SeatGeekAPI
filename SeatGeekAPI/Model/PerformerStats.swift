@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - PerformerStats
 struct PerformerStats: Codable {
-    let eventCount: Int
+    let eventCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case eventCount

@@ -9,14 +9,15 @@ import Foundation
 
 // MARK: - Taxonomy
 struct Taxonomy: Codable {
-    let id: Int
-    let name: NameEnum
+    let id: Int?
+    //let name: NameEnum?
     let parentID: Int?
     let documentSource: DocumentSource?
-    let rank: Int
+    let rank: Int?
 
     enum CodingKeys: String, CodingKey {
-        case id, name
+        //case name
+        case id
         case parentID
         case documentSource
         case rank

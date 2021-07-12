@@ -9,8 +9,8 @@ import Foundation
 
 // MARK: - DocumentSource
 struct DocumentSource: Codable {
-    let sourceType: SourceType
-    let generationType: GenerationType
+    let sourceType: SourceType?
+    let generationType: GenerationType?
 
     enum CodingKeys: String, CodingKey {
         case sourceType

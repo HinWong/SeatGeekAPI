@@ -9,11 +9,11 @@ import Foundation
 
 // MARK: - GenreImages
 struct GenreImages: Codable {
-    let the1200X525, the1200X627, the136X136, the500_700: String
-    let the800X320, banner, block, criteo130_160: String
-    let criteo170_235, criteo205_100, criteo400_300, fb100X72: String
-    let fb600_315, huge, ipadEventModal, ipadHeader: String
-    let ipadMiniExplore, mongo, squareMid, triggitFbAd: String
+    let the1200X525, the1200X627, the136X136, the500_700: String?
+    let the800X320, banner, block, criteo130_160: String?
+    let criteo170_235, criteo205_100, criteo400_300, fb100X72: String?
+    let fb600_315, huge, ipadEventModal, ipadHeader: String?
+    let ipadMiniExplore, mongo, squareMid, triggitFbAd: String?
 
     enum CodingKeys: String, CodingKey {
         case the1200X525

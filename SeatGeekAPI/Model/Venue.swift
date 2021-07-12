@@ -9,27 +9,31 @@ import Foundation
 
 // MARK: - Venue
 struct Venue: Codable {
-    let state, nameV2, postalCode, name: String
-    let links: [JSONAny]
-    let timezone: Timezone
-    let url: String
-    let score: Double
-    let location: Location
-    let address: String
-    let country: Country
-    let hasUpcomingEvents: Bool
-    let numUpcomingEvents: Int
-    let city, slug, extendedAddress: String
-    let id, popularity: Int
+    let state, name: String?
+    let postalCode: String?
+    let nameV2: String?
+    let links: [JSONAny]?
+    //let timezone: Timezone?
+    let url: String?
+    let score: Double?
+    let location: Location?
+    let address: String?
+    //let country: Country?
+    let hasUpcomingEvents: Bool?
+    let numUpcomingEvents: Int?
+    let city, slug, extendedAddress: String?
+    let id, popularity: Int?
     let accessMethod: JSONNull?
-    let metroCode, capacity: Int
-    let displayLocation: String
+    let metroCode, capacity: Int?
+    let displayLocation: String?
 
     enum CodingKeys: String, CodingKey {
         case state
         case nameV2
         case postalCode
-        case name, links, timezone, url, score, location, address, country
+        case name, links, url, score, location, address
+        //case country
+        //case timezone
         case hasUpcomingEvents
         case numUpcomingEvents
         case city, slug

@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - Division
 struct Division: Codable {
-    let taxonomyID: Int
+    let taxonomyID: Int?
     let shortName: String?
-    let displayName, displayType: String
-    let divisionLevel: Int
+    let displayName, displayType: String?
+    let divisionLevel: Int?
     let slug: String?
 
     enum CodingKeys: String, CodingKey {

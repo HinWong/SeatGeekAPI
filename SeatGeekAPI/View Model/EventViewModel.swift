@@ -13,23 +13,23 @@ class EventViewModel {
         self.eventInformation = eventResponse
     }
     
-    func getVenueAt(indexPath: IndexPath) -> Venue {
-        self.eventInformation.events[indexPath.row].venue
+    func getVenueAt(indexPath: IndexPath)  {
+        self.eventInformation.events?[indexPath.row].venue
     }
     
     func getEventDate(indexPath: IndexPath) -> String {
-        self.eventInformation.events[indexPath.row].announceDate
+        self.eventInformation.events?[indexPath.row].announceDate ?? "N/A"
     }
     
     func getEventTitle(indexPath: IndexPath) -> String {
-        self.eventInformation.events[indexPath.row].title
+        self.eventInformation.events?[indexPath.row].title ?? "N/A"
     }
     
     func getLocation(indexPath: IndexPath) -> String {
-        self.eventInformation.events[indexPath.row].venue.address
+        self.eventInformation.events?[indexPath.row].venue?.address ?? "N/A"
     }
     
     func displayLocationImage(indexPath: IndexPath) -> String {
-        self.eventInformation.events[indexPath.row].venue.displayLocation
+        self.eventInformation.events?[indexPath.row].venue?.displayLocation ?? "N/A"
     }
 }

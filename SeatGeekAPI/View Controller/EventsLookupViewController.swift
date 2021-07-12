@@ -17,6 +17,8 @@ class EventsLookupViewController: UIViewController {
     
     @IBOutlet var eventsTableView: UITableView!
     @IBOutlet weak var eventsSearchBar: UISearchBar!
+    
+    var eventsVM: EventViewModel?
 }
 
 //MARK: - Table view logic
@@ -34,5 +36,20 @@ extension EventsLookupViewController: UITableViewDelegate, UITableViewDataSource
 
 //MARK: - Search bar logic
 extension EventsLookupViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let eventsLookup = eventsSearchBar.text, !eventsLookup.isEmpty else {return}
+        NetworkManager.fetchEvents(searchTerm: eventsLookup) { [weak self]  result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    print(response)
+                    self?.eventsTableView.reloadData()
+                case .failure(let error):
+                    print(error,error.localizedDescription)
+                }
+            }
+        }
+    }
     
 }

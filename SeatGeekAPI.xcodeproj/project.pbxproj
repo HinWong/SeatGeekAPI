@@ -32,6 +32,7 @@
 		428F9C7D269A5489002BC688 /* EventsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C7C269A5489002BC688 /* EventsDetailViewController.swift */; };
 		428F9C81269A5BF4002BC688 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C80269A5BF4002BC688 /* EventViewModel.swift */; };
 		428F9C83269A5C09002BC688 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C82269A5C09002BC688 /* EventDetailsViewModel.swift */; };
+		428F9C86269C8A31002BC688 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428F9C85269C8A31002BC688 /* EventsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		428F9C7C269A5489002BC688 /* EventsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailViewController.swift; sourceTree = "<group>"; };
 		428F9C80269A5BF4002BC688 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		428F9C82269A5C09002BC688 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		428F9C85269C8A31002BC688 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				42078433269A4BF900EC3746 /* Networking */,
 				4207842E269A42E800EC3746 /* Model */,
 				428F9C84269A5C12002BC688 /* View Model */,
+				428F9C87269C8A41002BC688 /* Custom Cell */,
 			);
 			path = SeatGeekAPI;
 			sourceTree = "<group>";
@@ -162,6 +165,14 @@
 				428F9C82269A5C09002BC688 /* EventDetailsViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		428F9C87269C8A41002BC688 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				428F9C85269C8A31002BC688 /* EventsTableViewCell.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428F9C86269C8A31002BC688 /* EventsTableViewCell.swift in Sources */,
 				42078421269A41E300EC3746 /* PerformerImages.swift in Sources */,
 				4207842B269A429A00EC3746 /* Venue.swift in Sources */,
 				42078423269A420200EC3746 /* Location.swift in Sources */,

@@ -22,7 +22,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="150" id="tPp-3T-tFm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="150" id="tPp-3T-tFm" customClass="EventsTableViewCell" customModule="SeatGeekAPI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="68.5" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tPp-3T-tFm" id="3QH-kd-tVG">
@@ -74,6 +74,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="eventLocationLabel" destination="Khp-GB-EQJ" id="V6g-sZ-vRO"/>
+                                    <outlet property="eventTimeLabel" destination="VLx-Wu-KzK" id="DbO-Ww-Eku"/>
+                                    <outlet property="eventTitleLabel" destination="rwo-Dh-qIa" id="3To-Gm-bj2"/>
+                                    <outlet property="eventsImageView" destination="faA-yg-i8n" id="6VK-XR-WbO"/>
                                     <segue destination="3pc-Z1-qyT" kind="show" id="7h0-Lc-bBu"/>
                                 </connections>
                             </tableViewCell>

@@ -9,5 +9,5 @@ import Foundation
 
 // MARK: - PerformerImages
 struct PerformerImages: Codable {
-    let huge: String
+    let huge: String?
 }

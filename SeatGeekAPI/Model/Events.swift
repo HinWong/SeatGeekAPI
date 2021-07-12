@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: - Welcome
 struct EventResponse: Codable {
-    let events: [Event]
-    let meta: Meta
-    let inHand: InHand
+    let events: [Event]?
+    let meta: Meta?
+    let inHand: InHand?
 
     enum CodingKeys: String, CodingKey {
         case events, meta
@@ -22,36 +22,36 @@ struct EventResponse: Codable {
 
 // MARK: - Event
 struct Event: Codable {
-    let type: NameEnum
-    let id: Int
-    let datetimeUTC: String
-    let venue: Venue
-    let datetimeTbd: Bool
-    let performers: [Performer]
-    let isOpen: Bool
-    let links: [JSONAny]
-    let datetimeLocal: String
-    let timeTbd: Bool
-    let shortTitle, visibleUntilUTC: String
-    let stats: EventStats
-    let taxonomies: [Taxonomy]
-    let url: String
-    let score: Double
-    let announceDate, createdAt: String
-    let dateTbd: Bool
-    let title: String
-    let popularity: Double
-    let eventDescription: String
-    let status: Status
+    //let type: NameEnum?
+    let id: Int?
+    let datetimeUTC: String?
+    let venue: Venue?
+    let datetimeTbd: Bool?
+    let performers: [Performer]?
+    let isOpen: Bool?
+    let links: [JSONAny]?
+    let datetimeLocal: String?
+    let timeTbd: Bool?
+    let shortTitle, visibleUntilUTC: String?
+    let stats: EventStats?
+    let taxonomies: [Taxonomy]?
+    let url: String?
+    let score: Double?
+    let announceDate, createdAt: String?
+    let dateTbd: Bool?
+    let title: String?
+    let popularity: Double?
+    let eventDescription: String?
+    //let status: Status?
     let accessMethod, eventPromotion: JSONNull?
-    let announcements: InHand
-    let conditional: Bool
+    let announcements: InHand?
+    let conditional: Bool?
     let enddatetimeUTC: JSONNull?
     let generalAdmission: Bool?
-    let themes, domainInformation: [JSONAny]
+    let themes, domainInformation: [JSONAny]?
 
     enum CodingKeys: String, CodingKey {
-        case type
+        //case type
         case id
         case datetimeUTC
         case venue
@@ -69,7 +69,7 @@ struct Event: Codable {
         case dateTbd
         case title, popularity
         case eventDescription
-        case status
+        //case status
         case accessMethod
         case eventPromotion
         case announcements, conditional
@@ -80,35 +80,37 @@ struct Event: Codable {
     }
 }
 
-enum NameEnum: String, Codable {
-    case concert = "concert"
-    case concerts = "concerts"
-    case football = "football"
-    case musicFestival = "music_festival"
-    case ncaaFootball = "ncaa_football"
-    case sports = "sports"
-}
-
-enum PerformerType: String, Codable {
-    case band = "band"
-    case musicFestival = "music_festival"
-    case ncaaFootball = "ncaa_football"
-}
-
-enum Status: String, Codable {
-    case normal = "normal"
-}
-
-enum Country: String, Codable {
-    case canada = "Canada"
-    case us = "US"
-}
-
-enum Timezone: String, Codable {
-    case americaDenver = "America/Denver"
-    case americaIndianaIndianapolis = "America/Indiana/Indianapolis"
-    case americaNewYork = "America/New_York"
-}
+//enum NameEnum: String, Codable {
+//    case concert = "concert"
+//    case concerts = "concerts"
+//    case football = "football"
+//    case musicFestival = "music_festival"
+//    case ncaaFootball = "ncaa_football"
+//    case sports = "sports"
+//    case theater = "theater"
+//}
+//
+//enum PerformerType: String, Codable {
+//    case band = "band"
+//    case musicFestival = "music_festival"
+//    case ncaaFootball = "ncaa_football"
+//}
+//
+//enum Status: String, Codable {
+//    case normal = "normal"
+//}
+//
+//enum Country: String, Codable {
+//    case canada = "Canada"
+//    case us = "US"
+//}
+//
+//enum Timezone: String, Codable {
+//    case americaDenver = "America/Denver"
+//    case americaIndianaIndianapolis = "America/Indiana/Indianapolis"
+//    case americaNewYork = "America/New_York"
+//    case americaChicago = "America/Chicago"
+//}
 
 // MARK: - Encode/decode helpers
 
