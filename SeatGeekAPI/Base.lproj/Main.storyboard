@@ -124,16 +124,26 @@
                                     <constraint firstAttribute="height" constant="200" id="Umv-aA-MqH"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOw-VR-F3I">
+                                <rect key="frame" x="20" y="450" width="374" height="22"/>
+                                <state key="normal" title="Save to Favorites" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="favoritesButtonTapped:" destination="3pc-Z1-qyT" eventType="touchUpInside" id="uNF-8f-Nzg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d7b-Ru-U6z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oDg-u8-E8K" firstAttribute="top" secondItem="Cxg-B8-n7Y" secondAttribute="bottom" constant="20" id="5BQ-tG-mYE"/>
+                            <constraint firstItem="d7b-Ru-U6z" firstAttribute="trailing" secondItem="zOw-VR-F3I" secondAttribute="trailing" constant="20" id="9qz-pW-jh4"/>
                             <constraint firstItem="zVw-pq-G4D" firstAttribute="top" secondItem="oDg-u8-E8K" secondAttribute="bottom" constant="10" id="ADc-oI-gfP"/>
+                            <constraint firstItem="zOw-VR-F3I" firstAttribute="leading" secondItem="d7b-Ru-U6z" secondAttribute="leading" constant="20" id="AV8-Sa-FDy"/>
                             <constraint firstItem="d7b-Ru-U6z" firstAttribute="trailing" secondItem="zVw-pq-G4D" secondAttribute="trailing" id="EW6-ek-iCX"/>
                             <constraint firstItem="d7b-Ru-U6z" firstAttribute="trailing" secondItem="JYh-BX-oqV" secondAttribute="trailing" id="FtX-RP-OIH"/>
                             <constraint firstItem="d7b-Ru-U6z" firstAttribute="trailing" secondItem="Cxg-B8-n7Y" secondAttribute="trailing" id="Ksc-L6-9Cb"/>
                             <constraint firstItem="Cxg-B8-n7Y" firstAttribute="leading" secondItem="d7b-Ru-U6z" secondAttribute="leading" id="bpJ-yI-usQ"/>
+                            <constraint firstItem="zOw-VR-F3I" firstAttribute="top" secondItem="zVw-pq-G4D" secondAttribute="bottom" constant="20" id="e3J-fh-13D"/>
                             <constraint firstItem="JYh-BX-oqV" firstAttribute="top" secondItem="d7b-Ru-U6z" secondAttribute="top" constant="10" id="ghe-CR-aQ6"/>
                             <constraint firstItem="d7b-Ru-U6z" firstAttribute="trailing" secondItem="oDg-u8-E8K" secondAttribute="trailing" id="ibX-na-mZ7"/>
                             <constraint firstItem="Cxg-B8-n7Y" firstAttribute="top" secondItem="JYh-BX-oqV" secondAttribute="bottom" constant="20" id="rqq-4t-gbh"/>
@@ -148,11 +158,12 @@
                         <outlet property="eventTimeLabel" destination="oDg-u8-E8K" id="UuR-UE-gzm"/>
                         <outlet property="eventTitleLabel" destination="JYh-BX-oqV" id="Ovu-A8-8qZ"/>
                         <outlet property="eventVenueImageView" destination="Cxg-B8-n7Y" id="nm6-Xd-4D8"/>
+                        <outlet property="favoritesButton" destination="zOw-VR-F3I" id="RBw-PK-Njl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4G-rY-z8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525" y="88"/>
+            <point key="canvasLocation" x="1524.6376811594205" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HjD-b6-pp3">
@@ -174,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -33,13 +33,8 @@ extension EventsLookupViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = eventsTableView.dequeueReusableCell(withIdentifier: "eventCell") as? EventsTableViewCell,
               let eventDetails = eventsVM?.getNumberOfEvents() else {return UITableViewCell()}
-//        cell.eventLocationLabel.text = eventsVM?.getVenueAt(indexPath: indexPath)
-//        cell.eventTitleLabel.text = eventsVM?.getEventTitle(indexPath: indexPath)
-//        cell.eventTimeLabel.text = eventsVM?.getEventDate(indexPath: indexPath)
-//        cell.eventsImageView.image = eventsVM?.getPerformerImageURL(indexPath: indexPath)
         
         let cellVM = EventDetailsViewModel(event: (eventsVM?.eventInformation.events?[indexPath.row])!)
-        //print(eventsVM?.performerImage)
         cell.configure(viewModel: cellVM)
         
         
@@ -89,8 +84,7 @@ extension EventsLookupViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         eventsSearchBar.text = nil
         eventsSearchBar.endEditing(true)
-
-    
+        
     }
     
 }

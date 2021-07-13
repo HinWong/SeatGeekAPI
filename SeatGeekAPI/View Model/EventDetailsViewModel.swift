@@ -8,14 +8,10 @@
 import Foundation
 
 class EventDetailsViewModel {
-//    let eventResponse: [Event]
     let event: Event
-    //let performerImage: PerformerImages?
     
     init(event: Event) {
-        //self.eventResponse = eventResponse
         self.event = event
-        //self.performerImage = performerImage
     }
     
     func getEventTitle() -> String {

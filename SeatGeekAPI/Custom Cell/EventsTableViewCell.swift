@@ -31,7 +31,6 @@ class EventsTableViewCell: UITableViewCell {
             eventTitleLabel.text = cellViewModel.getEventTitle()
             eventLocationLabel.text = cellViewModel.getVenueLocation()
             eventTimeLabel.text = cellViewModel.getEventDate()
-            //eventsImageView.image = cellViewModel.getPerformerImage()
         }
     }
     
