@@ -15,6 +15,7 @@ class EventsDetailViewController: UIViewController {
     }
     
     var detailsVM: EventDetailsViewModel?
+    var eventsVM: EventViewModel?
     
     //MARK: - Outlets
     @IBOutlet weak var eventTitleLabel: UILabel!
@@ -27,7 +28,11 @@ class EventsDetailViewController: UIViewController {
         eventTitleLabel.text = detailsVM?.getEventTitle()
         eventLocationLabel.text = detailsVM?.getEventLocation()
         //eventVenueImageView.image = detailsVM?.getDetailedImageURL()
+        ImageCache.shared.loadImage(from: detailsVM?.getDetailedImageURL() ?? "") { [self] image in
+            eventVenueImageView.image = image
+            }
+        }
     }
     
     
-}
+
