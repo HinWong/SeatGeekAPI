@@ -48,7 +48,8 @@ extension EventsLookupViewController: UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "EventsDetailVC") as? EventsDetailViewController {
-            
+            let detailsVM = EventDetailsViewModel(event: (eventsVM?.eventInformation.events?[indexPath.row])!)
+            vc.detailsVM = detailsVM
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
