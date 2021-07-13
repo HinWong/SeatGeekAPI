@@ -11,7 +11,7 @@ class EventsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        self.updateLabels()
     }
     
     var detailsVM: EventDetailsViewModel?
@@ -22,7 +22,7 @@ class EventsDetailViewController: UIViewController {
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var eventVenueImageView: UIImageView!
     
-    private func updateUI() {
+    private func updateLabels() {
         eventTimeLabel.text = detailsVM?.getEventDate()
         eventTitleLabel.text = detailsVM?.getEventTitle()
         eventLocationLabel.text = detailsVM?.getEventLocation()

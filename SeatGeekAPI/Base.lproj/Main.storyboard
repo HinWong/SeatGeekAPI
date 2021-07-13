@@ -96,7 +96,7 @@
         <!--Details-->
         <scene sceneID="PJk-Oc-LFr">
             <objects>
-                <viewController id="3pc-Z1-qyT" customClass="EventsDetailViewController" customModule="SeatGeekAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsDetailVC" id="3pc-Z1-qyT" customClass="EventsDetailViewController" customModule="SeatGeekAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKo-Xf-Pcd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

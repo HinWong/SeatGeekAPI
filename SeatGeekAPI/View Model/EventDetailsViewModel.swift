@@ -8,14 +8,14 @@
 import Foundation
 
 class EventDetailsViewModel {
-    let eventResponse: [Event]
+//    let eventResponse: [Event]
     let event: Event
-    let performerImage: PerformerImages
+//    let performerImage: PerformerImages
     
-    init(eventResponse: [Event], event: Event, performerImage: PerformerImages) {
-        self.eventResponse = eventResponse
+    init(event: Event) {
+        //self.eventResponse = eventResponse
         self.event = event
-        self.performerImage = performerImage
+        //self.performerImage = performerImage
     }
     
     func getEventTitle() -> String {
@@ -38,7 +38,7 @@ class EventDetailsViewModel {
         self.event.venue?.displayLocation ?? "N/A"
     }
     
-    func getDetailedImage() -> String {
-        self.performerImage.huge ?? "N/A"
-    }
+//    func getDetailedImage() -> String {
+//        self.performerImage.huge ?? "N/A"
+//    }
 }

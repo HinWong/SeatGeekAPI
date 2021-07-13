@@ -7,26 +7,34 @@
 
 import Foundation
 
+//array view model
 class EventViewModel {
     let eventInformation: EventResponse
-    let eventSpecifics: Event
-    let performerImage: PerformerImages
+    let eventSpecifics: Event?
+    let performerImage: PerformerImages?
+    
+    init(eventResponse: EventResponse) {
+        self.eventInformation = eventResponse
+        self.performerImage = nil
+        self.eventSpecifics = nil
+    }
+    
     init(eventResponse: EventResponse, performerImage: PerformerImages, eventSpecifics: Event) {
         self.eventInformation = eventResponse
         self.performerImage = performerImage
         self.eventSpecifics = eventSpecifics
     }
     
-    func getVenueAt()  -> String {
-        self.eventSpecifics.venue?.address ?? "N/A"
+    func getVenueAt(indexPath: IndexPath)  -> String {
+        self.eventInformation.events?[indexPath.row].venue?.address ?? "N/A"
     }
     
-    func getEventDate() -> String {
-        self.eventSpecifics.announceDate ?? "N/A"
+    func getEventDate(indexPath: IndexPath) -> String {
+        self.eventInformation.events?[indexPath.row].datetimeUTC ?? "N/A"
     }
     
-    func getEventTitle() -> String {
-        self.eventSpecifics.title ?? "N/A"
+    func getEventTitle(indexPath: IndexPath) -> String {
+        self.eventInformation.events?[indexPath.row].title ?? "N/A"
     }
     
     func displayLocationImage(indexPath: IndexPath) -> String {
@@ -34,7 +42,7 @@ class EventViewModel {
     }
     
     func getPerformerImage() -> String {
-        self.performerImage.huge ?? "N/A"
+        self.performerImage?.huge ?? "N/A"
     }
     
     func getNumberOfEvents() -> Int {
