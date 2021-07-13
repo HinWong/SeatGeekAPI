@@ -26,7 +26,7 @@ class EventsDetailViewController: UIViewController {
         eventTimeLabel.text = detailsVM?.getEventDate()
         eventTitleLabel.text = detailsVM?.getEventTitle()
         eventLocationLabel.text = detailsVM?.getEventLocation()
-        //eventVenueImageView.image = detailsVM?.getDetailedImage()
+        //eventVenueImageView.image = detailsVM?.getDetailedImageURL()
     }
     
     

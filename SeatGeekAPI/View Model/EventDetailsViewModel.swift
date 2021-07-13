@@ -10,7 +10,7 @@ import Foundation
 class EventDetailsViewModel {
 //    let eventResponse: [Event]
     let event: Event
-//    let performerImage: PerformerImages
+    //let performerImage: PerformerImages?
     
     init(event: Event) {
         //self.eventResponse = eventResponse
@@ -38,7 +38,7 @@ class EventDetailsViewModel {
         self.event.venue?.displayLocation ?? "N/A"
     }
     
-//    func getDetailedImage() -> String {
-//        self.performerImage.huge ?? "N/A"
-//    }
+    func getDetailedImageURL() -> String {
+        self.event.performers?.first?.image ?? "N/A"
+    }
 }

@@ -13,13 +13,17 @@ class EventsTableViewCell: UITableViewCell {
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventLocationLabel: UILabel!
     @IBOutlet weak var eventTimeLabel: UILabel!
-    // vm should be DetailsVM
+
     var cellViewModel: EventDetailsViewModel? {
         didSet {
             DispatchQueue.main.async {
                 self.updateLabels()
             }
         }
+    }
+    
+    func configure(viewModel: EventDetailsViewModel) {
+        self.cellViewModel = viewModel
     }
     
     func updateLabels() {

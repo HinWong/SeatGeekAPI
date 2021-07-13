@@ -78,7 +78,6 @@
                                     <outlet property="eventTimeLabel" destination="VLx-Wu-KzK" id="DbO-Ww-Eku"/>
                                     <outlet property="eventTitleLabel" destination="rwo-Dh-qIa" id="3To-Gm-bj2"/>
                                     <outlet property="eventsImageView" destination="faA-yg-i8n" id="6VK-XR-WbO"/>
-                                    <segue destination="3pc-Z1-qyT" kind="show" id="7h0-Lc-bBu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -102,25 +101,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYh-BX-oqV">
-                                <rect key="frame" x="0.0" y="98" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDg-u8-E8K">
-                                <rect key="frame" x="0.0" y="398" width="414" height="36"/>
+                                <rect key="frame" x="0.0" y="354" width="414" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVw-pq-G4D">
-                                <rect key="frame" x="0.0" y="444" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="400" width="414" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-B8-n7Y">
-                                <rect key="frame" x="0.0" y="178" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="134" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Umv-aA-MqH"/>
                                 </constraints>

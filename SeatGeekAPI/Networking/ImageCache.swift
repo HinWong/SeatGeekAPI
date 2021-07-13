@@ -20,10 +20,10 @@ class ImageCache {
                 completionHandler?(cachedImage)
             }
         } else {
-            guard let placeholder = UIImage(named: "loading.png") else { return }
-            DispatchQueue.main.async {
-                completionHandler?(placeholder)
-            }
+//            guard let placeholder = UIImage(named: "loading.png") else { return }
+//            DispatchQueue.main.async {
+//                completionHandler?(placeholder)
+//            }
             let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
                 if let myData = data, let image = UIImage(data: myData) {
                     self.cache.setObject(image, forKey: urlString as NSString)
