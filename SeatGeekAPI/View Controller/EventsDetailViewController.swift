@@ -16,7 +16,6 @@ class EventsDetailViewController: UIViewController {
     
     var detailsVM: EventDetailsViewModel?
     var eventsVM: EventViewModel?
-    var favButtonTapped = false
     
     //MARK: - Outlets
     @IBOutlet weak var eventTitleLabel: UILabel!
@@ -27,14 +26,14 @@ class EventsDetailViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func favoritesButtonTapped(_ sender: UIButton) {
-        if !favButtonTapped {
-            favButtonTapped = true
+        if favoritesButton.tag == 0 {
             let image = UIImage(systemName: "heart") as UIImage?
             favoritesButton.setImage(image, for: .normal)
+            favoritesButton.tag = 1
         } else {
-            favButtonTapped = false
             let image = UIImage(systemName: "heart.fill") as UIImage?
             favoritesButton.setImage(image, for: .normal)
+            favoritesButton.tag = 0
         }
     }
     
